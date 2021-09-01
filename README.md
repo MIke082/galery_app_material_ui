@@ -1,23 +1,11 @@
 # Instagram Clone
 
-Instagram clone is an minimal clone of the Instagram with features like Authentication,Add post,Add Comment which is developed serverless using FIREBASE. 
-
-## Demo
-[insta -Clone](instagram-clone-9c3fa.web.app/) 
-
-## SCREENSHOT
-
-[![frontscrren](https://i.postimg.cc/ZRD4gNn6/Screen-Capture-select-area-20210831093807.png)](instagram-clone-9c3fa.web.app/)
-[![frontscrren](https://i.postimg.cc/1tzyJBm9/Screen-Capture-select-area-20210831093821.png)](instagram-clone-9c3fa.web.app/)
-[![frontscrren](https://i.postimg.cc/N0Dg6SwJ/Screen-Capture-select-area-20210831093846.png)](instagram-clone-9c3fa.web.app/)
-
+Gallery in claw you can Add Post, Add Comment, which is developed without a server using FIREBASE.
 
 ## ⚡ Features
 - Create Posts
-- Signin and Signup 
 - Comment on others post
-- Only can comment when signed in
-
+- 
 ## SETUP
 
 #### 1. Setting Up Firebase 
@@ -35,11 +23,10 @@ Instagram clone is an minimal clone of the Instagram with features like Authenti
   
 - Now Lets add the config to firebaseConfig page
 
-- Enable Email Authentication , Feel Free to add other authentication methods and setup accordingly
   
  2. Setup Repo Locally
  
-    `git clone https://github.com/ajithmadhan11/instagram-clone.git`
+    `https://github.com/MIke082/galery_app_material_ui.git`
 
 ### `npm install`
 
