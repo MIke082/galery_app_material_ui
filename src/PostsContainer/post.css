@@ -1,0 +1,57 @@
+.posts-component-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.post {
+    background-color: white;
+    width: 350px;
+    height: 350px;
+}
+
+.post_image {
+    width: 100%;
+    object-fit: contain;
+}
+
+.post_text {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.post_comments {
+    margin-left: 20px;
+    padding: 5px;
+}
+
+
+.form_comment {
+    display: flex;
+    justify-content: space-around;
+}
+
+.post-toogle-btn-open {
+    display: flex;
+    justify-content: center;
+}
+
+.post-toogle-btn-close {
+    display: flex;
+    align-items: center;
+}
+
+.post-toogle-btn-close button {
+    width: 180px;
+}
+
+.posts-btn-upload {
+    display: flex;
+    justify-content: center;
+}
+
+.posts-btn-upload button {
+    width: 500px;
+    margin-bottom: 50px;
+}

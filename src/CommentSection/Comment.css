@@ -1,0 +1,36 @@
+.comment-text {
+  text-align: left;
+  padding: 10px;
+  margin-left: 5px;
+  width: 280px;
+}
+
+.comment {
+  margin-left: 20px;
+  padding: 5px;
+}
+.comment-form  {
+  margin: 10px 0;
+  width: 100%;
+}
+.comment-form input {
+  width: 100%;
+  font-size: 14px;
+  padding: 10px;
+  border: none;
+  border-top: 1px solid #efefef;
+  color: rgb(124, 123, 123);
+}
+
+.comment-form button {
+  width: 22%;
+  height: 50px;
+ margin-left: 10px;
+}
+
+.user {
+  font-size: 14px;
+  margin-left: 5px;
+  color: black;
+  font-weight: bold;
+}
