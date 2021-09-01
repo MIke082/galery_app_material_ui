@@ -1,4 +1,4 @@
-# Instagram Clone
+# Gallery app
 
 Gallery in claw you can Add Post, Add Comment, which is developed without a server using FIREBASE.
 
