@@ -1,0 +1,26 @@
+.card-container-wrapper {
+  height: 100%;
+  width: 50%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.card-comment-text {
+  text-align: left;
+  padding-left: 10px;
+  width: 50%;
+  margin: 5px auto;
+}
+
+.card-image {
+  width: 50%;
+}

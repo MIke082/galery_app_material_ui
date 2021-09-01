@@ -5,10 +5,11 @@ import { db } from '../Firebase'
 import firebase from 'firebase';
 import Input from '@material-ui/core/Input';
 import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
 
 
 
-const Post = ({ postId, username, title, imageUrl, user }) => {
+const Post = ({ postId, username, title, imageUrl }) => {
 
     const [comments, setcomments] = useState([]);
     const [comment, setcomment] = useState('');
@@ -17,6 +18,7 @@ const Post = ({ postId, username, title, imageUrl, user }) => {
 
     useEffect(() => {
 
+        console.log(comments, 'postId');
 
         if (postId) {
 
@@ -46,32 +48,35 @@ const Post = ({ postId, username, title, imageUrl, user }) => {
     }
     return (
         <div className="post">
-            <img src={imageUrl} alt="img" className="post_image" />
-            <h4 className="post_text"><strong>{username}</strong> {title}</h4>
 
+            <Link to={{ pathname: `/cardContainer/${postId}`, state: comments, title, imageUrl }}>
+
+                <img src={imageUrl} alt="img" className="post_image" />
+                <h4 className="post_text"><strong>{username}</strong> {title}</h4>
+            </Link>
             <div>
-            {!visibleComments ?
-                <div className='post-toogle-btn-open'>
-                    <Button
-                        variant="contained"
-                        color="primary"
-                        onClick={() => setVisibleComments(true)}>
-                        Open comments
-                    </Button>
-                </div>
+                {!visibleComments ?
+                    <div className='post-toogle-btn-open'>
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            onClick={() => setVisibleComments(true)}>
+                            Open comments
+                        </Button>
+                    </div>
                     :
-                 <div style={{paddingBottom: 30}}>
-                <div className="post_comments">
-                    {
-                        comments.map((comment, index) => (
-                            <p key={index}>
-                                <strong>{comment.username} </strong>{comment.text}
-                            </p>
-                        ))
-                    }
+                    <div style={{ paddingBottom: 30 }}>
+                        <div className="post_comments">
+                            {
+                                comments.map((comment, index) => (
+                                    <p key={index}>
+                                        <strong>{comment.username} </strong>{comment.text}
+                                    </p>
+                                ))
+                            }
 
-                </div>
-               
+                        </div>
+
                         <form className="form_comment">
                             <Input
                                 type="text"
@@ -92,15 +97,15 @@ const Post = ({ postId, username, title, imageUrl, user }) => {
                             </Button>
                         </form>
 
-                    <div className="post-toogle-btn-close">
-                        <Button
-                            variant="contained"
-                            color="primary"
-                            onClick={() => setVisibleComments(false)}>
-                            Close commetns
-                        </Button>
+                        <div className="post-toogle-btn-close">
+                            <Button
+                                variant="contained"
+                                color="primary"
+                                onClick={() => setVisibleComments(false)}>
+                                Close commetns
+                            </Button>
+                        </div>
                     </div>
-                     </div>
                 }
             </div>
         </div>

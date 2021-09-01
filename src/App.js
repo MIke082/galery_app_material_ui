@@ -9,21 +9,20 @@ import {
 import SignInPage from './SignInPage/SignInPage';
 import Posts from './PostsContainer/Posts';
 import DummyPostsPage from './PostsContainer/DummyPostsPage';
-// import PostsPage from './PostsContainer/PostsPage';
-
-// import InstagramEmbed from 'react-instagram-embed';
+import DummyCardContainer from "./CardContainer/DummyCardContainer";
+import CardContainer from "./CardContainer/CardContainer";
 
 function App() {
   return (
     <div>
       <Router>
         <Switch>
-          {/* <Route path="/createNewPost">
-            <CreateNewPostContainer />
-          </Route>
-          <Route path="/card">
+        <Route path="/cardContainer">
             <CardContainer />
-          </Route> */}
+          </Route>
+          <Route path="/dummyCard">
+            <DummyCardContainer />
+          </Route>
           <Route path="/mainPage">
             <DummyPostsPage />
             <Posts />

@@ -15,7 +15,7 @@ const DummyPost = props => {
     <div className='post-border'>
       <div className='post-image-wrapper'>
 
-        <Link to={{ pathname: `/card/${post.id}`, state: post }}>
+        <Link to={{ pathname: `/dummyCard/${post.id}`, state: post }}>
           <img
             alt='post thumbnail'
             className='post-image'

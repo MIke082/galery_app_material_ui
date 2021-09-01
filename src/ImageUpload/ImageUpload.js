@@ -5,7 +5,7 @@ import { db, storage } from '../Firebase';
 import firebase from 'firebase';
 import './Imageupload.css'
 
-const ImageUpload = (username) => {
+const ImageUpload = () => {
     const [file, setFile] = useState(null);
     const [progress, setProgress] = useState(0);
     const [title, setTitle] = useState('');
@@ -24,7 +24,6 @@ const ImageUpload = (username) => {
             (snapshot) => {
                 const progress = Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
                 setProgress(progress);
-                // setupbtn(false)
             },
             (error) => {
                 console.log(error);
@@ -46,6 +45,7 @@ const ImageUpload = (username) => {
                         setTitle('');
                         setFile(null);
                         setupbtn('uploaded');
+
                     });
             }
         )
@@ -58,6 +58,7 @@ const ImageUpload = (username) => {
                 value={progress}
                 max="100"
                 className="u_progress" />
+
             <Input
                 type="text"
                 placeholder="Your title..."
